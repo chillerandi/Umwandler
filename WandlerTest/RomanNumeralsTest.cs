@@ -113,11 +113,22 @@ namespace WandlerTest
         }
 
         [TestMethod]
-        public void romanX()
+        public void romanTen()
         {
             Assert.AreEqual(10 , RomanNumerals.convertToArabic("X"));
         }
 
+        [TestMethod]
+        public void romanFifteen()
+        {
+            Assert.AreEqual(15, RomanNumerals.convertToArabic("XV"));
+        }
+
+        [TestMethod]
+        public void romanFourtyEight()
+        {
+            Assert.AreEqual(48, RomanNumerals.convertToArabic("XLVIII"));
+        }
 
     }
 }
