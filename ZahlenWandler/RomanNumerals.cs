@@ -3,6 +3,7 @@ using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Collections;
 
 namespace ZahlenWandler
 {
@@ -10,6 +11,7 @@ namespace ZahlenWandler
     {
         private static int[] VALUES = { 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 };
         private static String[] SYMBOLS = { "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I" };
+        private static List<String> SYMBOLLIST = SYMBOLS.OfType<String>().ToList();
 
         private static int convert(StringBuilder sb, int remaining, int value, String roman)
         {
@@ -36,6 +38,9 @@ namespace ZahlenWandler
             int current = 0;
 
             for (int i = 0; i < roman.Length; i++) {
+
+                int index = SYMBOLLIST.IndexOf(roman[i].ToString());
+
                 if (roman[i] == 'I')
                     current += 1;
 
