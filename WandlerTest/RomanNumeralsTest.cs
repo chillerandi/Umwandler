@@ -130,5 +130,17 @@ namespace WandlerTest
             Assert.AreEqual(48, RomanNumerals.convertToArabic("XLVIII"));
         }
 
+        [TestMethod]
+        public void romanNinetyNine()
+        {
+            Assert.AreEqual(99, RomanNumerals.convertToArabic("XCIX"));
+        }
+
+        [TestMethod]
+        public void romanOneHundredNinetyNine()
+        {
+            Assert.AreEqual(199, RomanNumerals.convertToArabic("CXCIX"));
+        }
+
     }
 }

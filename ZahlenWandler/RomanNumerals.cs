@@ -35,34 +35,23 @@ namespace ZahlenWandler
 
         public static object convertToArabic(string roman)
         {
+            int arabic = 0;
+            int previous = 0;
             int current = 0;
 
             for (int i = 0; i < roman.Length; i++) {
 
                 int index = SYMBOLLIST.IndexOf(roman[i].ToString());
-
-                if (roman[i] == 'I')
-                    current += 1;
-
-                if (roman[i] == 'V')
-                    current += 5;
-
-                if (roman[i] == 'X')
-                    current += 10;
-
-                if (roman[i] == 'L')
-                    current += 50;
-
-                if (roman[i] == 'C')
-                    current += 100;
-
-                if (roman[i] == 'D')
-                    current += 500;
-
-                if (roman[i] == 'M')
-                    current += 1000;
+                current = VALUES[index];
+                if (previous < current && previous != 0) {
+                    current = current - previous;
+                    arabic -= previous;
+                }
+                arabic += current;
+                previous = current;
+                current = 0;
             }
-            return current;
+            return arabic;
 
         }
     }
