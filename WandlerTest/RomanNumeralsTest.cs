@@ -7,12 +7,7 @@ namespace WandlerTest
     [TestClass]
     public class RomanNumeralsTest
     {
-        //[TestInitialize]
-        //public void TestInitialize()
-        //{
-        //    rn = new RomanNumerals();
-        //}
-
+       
         [TestMethod]
         public void oneTwoThree()
         {
@@ -59,7 +54,7 @@ namespace WandlerTest
         }
 
         [TestMethod]
-        public void eightyFour()
+        public void fourtyEight()
         {
             Assert.AreEqual("XLVIII", RomanNumerals.convertToRoman(48));
         }

@@ -9,8 +9,8 @@ namespace ZahlenWandler
 {
     public static class RomanNumerals
     {
-        private static int[] VALUES = { 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 };
-        private static String[] SYMBOLS = { "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I" };
+        private static int[] VALUES = { 1000, 500, 100, 50, 10, 5, 1 };
+        private static String[] SYMBOLS = { "M", "D", "C", "L", "X", "V", "I" };
         private static List<String> SYMBOLLIST = SYMBOLS.OfType<String>().ToList();
 
         private static int convert(StringBuilder sb, int remaining, int value, String roman)

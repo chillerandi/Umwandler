@@ -15,19 +15,18 @@ namespace ZahlenWandler
             Match arabMatch = Regex.Match(input, "^[0-9]{1,4}$");
             Match romanMatch = Regex.Match(input, "^M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$");
             int num;
-            
 
-            if (arabMatch.Success ) {                
-                if (int.TryParse(input, out num)  && num <= 3999) {
+            if (arabMatch.Success) {
+                if (int.TryParse(input, out num) && num <= 3999) {
                     var result = RomanNumerals.convertToRoman(num);
-                    Console.WriteLine("Sie haben die arabische Zahl " + input +" eingegeben.");
+                    Console.WriteLine("Sie haben die arabische Zahl " + input + " eingegeben.");
                     Console.WriteLine("Die römische Entsprechung ist : " + result);
                     Console.Read();
                 }
             }
-            else if (romanMatch.Success) {                
+            else if (romanMatch.Success) {
                 var result = RomanNumerals.convertToArabic(input);
-                Console.WriteLine("Sie haben eine römische Zahl " + input + " eingegeben.");
+                Console.WriteLine("Sie haben die römische Zahl " + input + " eingegeben.");
                 Console.WriteLine("Die arabische Entsprechung ist : " + result);
                 Console.Read();
             }
