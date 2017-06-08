@@ -22,6 +22,11 @@ namespace ZahlenWandler
             return remaining;
         }
 
+        /// <summary>
+        /// converts arabic numbers to roman numerals
+        /// </summary>
+        /// <param name="arabic"></param>
+        /// <returns></returns>
         public static String convertToRoman(int arabic)
         {
             StringBuilder sb = new StringBuilder();
@@ -33,6 +38,11 @@ namespace ZahlenWandler
             return sb.ToString();
         }
 
+        /// <summary>
+        /// converts roman numerals to arabic numbers
+        /// </summary>
+        /// <param name="roman"></param>
+        /// <returns></returns>
         public static object convertToArabic(string roman)
         {
             int arabic = 0;
@@ -52,7 +62,6 @@ namespace ZahlenWandler
                 current = 0;
             }
             return arabic;
-
         }
     }
 }
