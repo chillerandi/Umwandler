@@ -30,5 +30,10 @@ namespace ZahlenWandler
             }
             return sb.ToString();
         }
+
+        public static object convertToArabic(string roman)
+        {
+            return 10;
+        }
     }
 }

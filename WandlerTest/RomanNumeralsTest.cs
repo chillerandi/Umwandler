@@ -7,112 +7,117 @@ namespace WandlerTest
     [TestClass]
     public class RomanNumeralsTest
     {
-
-        private RomanNumerals rn;
-
-        [TestInitialize]
-        public void TestInitialize()
-        {
-            rn = new RomanNumerals();
-        }
+        //[TestInitialize]
+        //public void TestInitialize()
+        //{
+        //    rn = new RomanNumerals();
+        //}
 
         [TestMethod]
         public void oneTwoThree()
         {
-            Assert.AreEqual("I", rn.convertToRoman(1));
-            Assert.AreEqual("II", rn.convertToRoman(2));
-            Assert.AreEqual("III", rn.convertToRoman(3));
+            Assert.AreEqual("I", RomanNumerals.convertToRoman(1));
+            Assert.AreEqual("II", RomanNumerals.convertToRoman(2));
+            Assert.AreEqual("III", RomanNumerals.convertToRoman(3));
         }
 
         [TestMethod]
         public void four()
         {
-            Assert.AreEqual("IV", rn.convertToRoman(4));
+            Assert.AreEqual("IV", RomanNumerals.convertToRoman(4));
         }
 
         [TestMethod]
         public void five()
         {
-            Assert.AreEqual("V", rn.convertToRoman(5));
+            Assert.AreEqual("V", RomanNumerals.convertToRoman(5));
         }
 
         [TestMethod]
         public void nine()
         {
-            Assert.AreEqual("IX", rn.convertToRoman(9));
+            Assert.AreEqual("IX", RomanNumerals.convertToRoman(9));
         }
 
         [TestMethod]
         public void ten()
         {
-            Assert.AreEqual("X", rn.convertToRoman(10));
+            Assert.AreEqual("X", RomanNumerals.convertToRoman(10));
         }
 
         [TestMethod]
         public void seventeen()
         {
-            Assert.AreEqual("XVII", rn.convertToRoman(17));
+            Assert.AreEqual("XVII", RomanNumerals.convertToRoman(17));
         }
 
 
         [TestMethod]
         public void twenty()
         {
-            Assert.AreEqual("XX", rn.convertToRoman(20));
+            Assert.AreEqual("XX", RomanNumerals.convertToRoman(20));
         }
 
         [TestMethod]
         public void eightyFour()
         {
-            Assert.AreEqual("XLVIII", rn.convertToRoman(48));
+            Assert.AreEqual("XLVIII", RomanNumerals.convertToRoman(48));
         }
 
         [TestMethod]
         public void ninetyNine()
         {
-            Assert.AreEqual("XCIX", rn.convertToRoman(99));
+            Assert.AreEqual("XCIX", RomanNumerals.convertToRoman(99));
         }
 
         [TestMethod]
         public void oneHundredNinetyNine()
         {
-            Assert.AreEqual("CXCIX", rn.convertToRoman(199));
+            Assert.AreEqual("CXCIX", RomanNumerals.convertToRoman(199));
         }
 
         [TestMethod]
         public void fourHundredEightyNine()
         {
-            Assert.AreEqual("CDLXXXIX", rn.convertToRoman(489));
+            Assert.AreEqual("CDLXXXIX", RomanNumerals.convertToRoman(489));
         }
 
         [TestMethod]
         public void fiveHundred()
         {
-            Assert.AreEqual("D", rn.convertToRoman(500));
+            Assert.AreEqual("D", RomanNumerals.convertToRoman(500));
         }
 
         [TestMethod]
         public void sixHundredSixtySix()
         {
-            Assert.AreEqual("DCLXVI", rn.convertToRoman(666));
+            Assert.AreEqual("DCLXVI", RomanNumerals.convertToRoman(666));
         }
 
         [TestMethod]
         public void eightHundredAndNinety()
         {
-            Assert.AreEqual("DCCCXC", rn.convertToRoman(890));
+            Assert.AreEqual("DCCCXC", RomanNumerals.convertToRoman(890));
         }
 
         [TestMethod]
         public void thousand()
         {
-            Assert.AreEqual("M", rn.convertToRoman(1000));
+            Assert.AreEqual("M", RomanNumerals.convertToRoman(1000));
         }
 
         [TestMethod]
         public void twoThousandFifeHundredTwentySix()
         {
-            Assert.AreEqual("MMDXXVI", rn.convertToRoman(2526));
+            Assert.AreEqual("MMDXXVI", RomanNumerals.convertToRoman(2526));
         }
+
+        [TestMethod]
+        public void romanX()
+        {
+            Assert.AreEqual(10 , RomanNumerals.convertToArabic("X"));
+        }
+
+
     }
 }
