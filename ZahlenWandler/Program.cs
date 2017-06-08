@@ -7,15 +7,17 @@ namespace ZahlenWandler
 {
     class Program
     {
-        private static RomanNumerals romanNumerals;
-
         static void Main(string[] args)
         {
-            romanNumerals = new RomanNumerals();
-            long num = Int64.Parse(args[0]);
-            var result = romanNumerals.convertToRoman(num);
-            Console.WriteLine(result);
-            Console.Read();
+            string input = Console.ReadLine();
+
+            int num;
+            if (int.TryParse(input, out num)) {
+                var result = RomanNumerals.convertToRoman(num);
+
+                Console.WriteLine(result);
+                Console.Read();
+            }
         }
     }
 }

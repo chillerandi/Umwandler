@@ -80,6 +80,12 @@ namespace WandlerTest
         }
 
         [TestMethod]
+        public void fourHundredEightyNine()
+        {
+            Assert.AreEqual("CDLXXXIX", rn.convertToRoman(489));
+        }
+
+        [TestMethod]
         public void fiveHundred()
         {
             Assert.AreEqual("D", rn.convertToRoman(500));
